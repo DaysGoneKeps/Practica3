@@ -1,0 +1,11 @@
+@model List<Post>
+
+<h2>Noticias</h2>
+<ul>
+@foreach (var post in Model)
+{
+    <li>
+        <a href="/News/Detalle/@post.Id">@post.Title</a>
+    </li>
+}
+</ul>
