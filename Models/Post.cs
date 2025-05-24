@@ -14,10 +14,10 @@ namespace Practica3.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id")]
         public int Id { get; set; }
-        public string Title { get; set; }
-        public string Body { get; set; }
+        public string? Title { get; set; }
+        public string? Body { get; set; }
         public int UserId { get; set; }
-        public User Author { get; set; }
+        public User? Author { get; set; }
         public List<Comment> Comments { get; set; }
 
     }

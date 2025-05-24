@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Practica3.Data;
+using Practica3.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,11 @@ builder.Services.AddControllersWithViews();
 
 //Registro mi logica customizada y reuzable
 
+// Agregar servicios al contenedor.
+builder.Services.AddControllersWithViews();
+
+// Registrar tu servicio personalizado
+builder.Services.AddHttpClient<NewsService>();
 
 //API description
 builder.Services.AddEndpointsApiExplorer();
