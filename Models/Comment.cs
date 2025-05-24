@@ -14,8 +14,8 @@ namespace Practica3.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id")]
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Body { get; set; }
+        public string? Name { get; set; }
+        public string? Body { get; set; }
 
     }
 }
